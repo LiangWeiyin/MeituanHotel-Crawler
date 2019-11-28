@@ -8,7 +8,6 @@
 from scrapy import signals
 from scrapy import Request
 import random
-import requests
 import logging
 import base64
 
@@ -156,8 +155,8 @@ class RandomUserAgentMiddleware():
 
 class ProxyMiddleware():
     proxyServer = "http://http-dyn.abuyun.com:9020"
-    proxyUser = "HM42684GL18Y4B4D"
-    proxyPass = "8602454252DBE490"
+    proxyUser = "B4D"
+    proxyPass = "490"
     proxyAuth = "Basic " + base64.urlsafe_b64encode(bytes((proxyUser + ":" + proxyPass), "ascii")).decode("utf8")
 
     def process_request(self, request, spider):
